@@ -82,25 +82,55 @@ export default {
 }
 </script>
 
-<template lang="">
-    <div class="container">
-        <div class="card d-flex flex-wrap">
-            <div v-for="serie in series" :key="serie.series">
-                <img class="img-card" :src="serie.thumb" alt="Thumbnail">
-                <p>Price: {{ serie.price }}</p>
-                <p>Series: {{ serie.series }}</p>
-                <p>Type: {{ serie.type }}</p>
-            </div>
-        </div>
-        
+<template lang="">   
+<div class="back-black">
+    <div class="current-button">
+        <button class="load-button">current series</button>
     </div>
+  <div class="container d-flex flex-wrap">
+    <div class="card text-white" v-for="serie in series" :key="serie.series">
+      <img class="img-card" :src="serie.thumb" alt="Thumbnail">
+      <div> <p>{{ serie.series.toUpperCase()}}</p></div>
+    </div>
+  </div>
+
+  <div class="container d-flex justify-center">
+        <div enter-class="">
+            <button class="load-button">LOAD MORE</button>
+        </div>
+  </div>
+</div>
+
+
 </template>
 
-
-
-<style lang="scss">
+<style lang="scss" scoped>
 .back-black {
-    background-color: black
+    background-color: black;
+    position: relative;
+}
+
+.card {
+    width: calc(100% / 6);
+    margin-top: 50px;
+    font-size: small;
+}
+
+.img-card {
+    height: 250px;
+}
+
+.load-button {
+    padding: 10px 50px;
+    background-color: rgb(0, 136, 255);
+    color: white;
+    margin: 40px;
+}
+
+.current-button {
+    position: absolute;
+    left: 15%;
+    transform: translateY(-50%);
 }
 </style>
 

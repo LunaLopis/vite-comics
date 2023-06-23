@@ -85,10 +85,11 @@ export default {
     <div>
         <div class=" container-dark"> 
         <div class="jambotron">
-            <button class="text-white">current series</button>
+         
         </div>    
     </div>
     </div>
+    
 </template>
 
 
@@ -135,6 +136,6 @@ li {
 .jambotron {
     background-image: url(../assets/img/jumbotron.jpg);
     background-size: cover;
-    height: 250px;
+    height: 350px;
 }
 </style>
